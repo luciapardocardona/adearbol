@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 153949829333703748}
   - component: {fileID: 153949829333703771}
   - component: {fileID: 153949829333703770}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Squirrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -132,8 +132,8 @@ MonoBehaviour:
   animacion: {fileID: 0}
   soundsalto: {fileID: 0}
   isPlayerTouchingDoor: 0
-  isPlayerOnExit: 0
-  isPlayerOnSwitch: 0
+  isPlayerOnPath: 0
+  isPlayerOnNpc: 0
 --- !u!114 &153949829333703770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0163bceab6e340a4fae80c44a375d8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 1
-  jumpSpeed: 15
-  monsters: []
+  runSpeed: 5
   dialogText: {fileID: 0}
   charPerDialog: 50
-  soundJump: {fileID: 0}
 --- !u!1 &4461888036995378130
 GameObject:
   m_ObjectHideFlags: 0
@@ -163,7 +160,7 @@ GameObject:
   - component: {fileID: 5623593257309890102}
   - component: {fileID: 6685753768208712657}
   - component: {fileID: 1383498341890999236}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Prota_Ardilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}

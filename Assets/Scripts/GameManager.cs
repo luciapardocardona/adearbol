@@ -16,51 +16,95 @@ public class GameManager : MonoBehaviour
         QuestionsConstants.day5
     };
 
-    float famScore = 0f;
-    float friendScore = 0f;
-    float moleScore = 0f;
-    bool hasAnswered = false;
+    string famScore = "famScore";
+    string friendScore = "friendScore";
+    string moleScore = "moleScore";
+
     Scene currentScene;
-
-
     Animator myAnimator;
     AudioSource sound;
-
     private string nextScene;
-    public AudioClip soundWoodDoor, soundMetalDoor;
-
-    public TextMeshProUGUI npcQuestionText;
-    public GameObject player;
-
     PlayerScript playerScript;
+    PlayerMovement playerMovement;
+
     private void Awake()
     {
         GameObject gameObject = GameObject.Find("Squirrel");
-        player = GameObject.Find("Squirrel");
-        player = GameObject.Find("NPC");
 
         currentScene = SceneManager.GetActiveScene();
 
         playerScript = gameObject.GetComponent<PlayerScript>();
+        playerMovement = gameObject.GetComponent<PlayerMovement>();
         sound = GetComponent<AudioSource>();
-        QuestionChooser();
-        AnswerChooser();
+
+        if (PlayerPrefs.GetInt("fromVillage") == 0)
+        {
+            gameObject.GetComponent<Rigidbody2D>().transform.position.Set(6, -3.2f, 0);
+        }
     }
 
+    private void Update()
+    {
+        if (dayCount == 4)
+        {
+            var masmenos = 10;
+            var rango = 15;
+            var percentageFamily = PlayerPrefs.GetInt(famScore) / 7f * 100;
+            var percentageFriend = PlayerPrefs.GetInt(friendScore) / 7f * 100;
+            var percentageMole = PlayerPrefs.GetInt(moleScore) / 7f * 100;
+
+            if (percentageFamily - masmenos > 100 - rango) // 1
+            {
+                // final fam 100%
+            }
+            else if (percentageFriend - masmenos > 100 - rango) // 2
+            {
+                // final friend 100%
+            }
+            else if (percentageMole - masmenos > 100 - rango) // 3
+            {
+                // final mole 100%
+            }
+            else if (percentageFamily - masmenos > 75 - rango) //4
+            {
+                // final fam 75 y friend 25
+            }
+            else if (percentageMole - masmenos > 75 - rango) //5
+            {
+                // final mole 75 y friend 25
+            }
+            else if (percentageFriend - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) //6
+            {
+                // final friend 50% y 50% mole
+            }
+            else if (percentageFamily - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) // 7
+            {
+                // final fam 50 y mole 50
+            }
+            else if (percentageFamily - masmenos > 35 - rango && percentageFriend - masmenos > 35 - rango && percentageMole - masmenos > 35 - rango) //8
+            {
+                // final todos 33
+            }
+            else //9
+            {
+                // final todos mal
+            }
+        }
+    }
     public void HandleSceneTransition()
     {
-         var currentScene = SceneManager.GetActiveScene();
+        var currentScene = SceneManager.GetActiveScene();
 
-         switch (currentScene.name)
-         {
-          case SceneConstants.Home:
+        switch (currentScene.name)
+        {
+            case SceneConstants.Home:
                 if (playerScript.isPlayerTouchingDoor)
                 {
                     this.nextScene = SceneConstants.Out;
                     this.GoToNextScene();
                 }
-               break;
-           case SceneConstants.Out:
+                break;
+            case SceneConstants.Out:
                 if (playerScript.isPlayerTouchingDoor)
                 {
                     this.nextScene = SceneConstants.Home;
@@ -72,11 +116,11 @@ public class GameManager : MonoBehaviour
                     this.GoToNextScene();
                 };
                 break;
-           case SceneConstants.Village:
+            case SceneConstants.Village:
                 if (playerScript.isPlayerOnPath)
                 {
                     this.nextScene = SceneConstants.Out;
-                    this.GoToNextScene();
+                    this.GoToNextScene(true);
                 }
                 break;
 
@@ -88,73 +132,111 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    private void GoToNextScene()
+    private void GoToNextScene(bool fromVillage = false)
     {
+        if (fromVillage)
+        {
+            PlayerPrefs.SetInt("fromVillage", 0);
+        }
         SceneManager.LoadScene(this.nextScene);
     }
 
-    private void QuestionChooser(bool reading = false)
+    public string QuestionChooser()
     {
-        if (reading)
-        {
-            // dialog has appeared
-            // TODO: lucia things
-        }
-        else
-        {
-            // dialog has to appear
-            var texto = "";
-
-            switch (currentScene.name)
-            {
-                case SceneConstants.Home:
-                    texto = WinningOption() == 0 ? dialogs[dayCount].questions.positive.family : dialogs[dayCount].questions.negative.family;
-                    break;
-                case SceneConstants.Village:
-                    texto = WinningOption() == 1 ? dialogs[dayCount].questions.positive.mole : dialogs[dayCount].questions.negative.mole;
-                    break;
-                case SceneConstants.Out:
-                    texto = WinningOption() == 2 ? dialogs[dayCount].questions.positive.friend : dialogs[dayCount].questions.negative.friend;
-                    break;
-            }
-            //npcQuestionText.SetText(texto);
-        }
-    }
-    
-
-    private int WinningOption()
-    {
-        if (famScore > friendScore && famScore > moleScore)
-        {
-            return 0;
-        }
-        else if (moleScore > friendScore && moleScore > famScore)
-        {
-            return 1;
-        }
-        else
-        {
-            return 2;
-        }
-
-    }
-
-    private void AnswerChooser()
-    {
-        var texto = "";
+        var text = String.Empty;
 
         switch (currentScene.name)
         {
             case SceneConstants.Home:
-                texto = WinningOption() == 0 ? dialogs[dayCount].npcAnswers.positive.family : dialogs[dayCount].npcAnswers.negative.family;
+                text = WinningOption() == EPeople.family ? dialogs[dayCount].questions.positive.family : dialogs[dayCount].questions.negative.family;
                 break;
             case SceneConstants.Village:
-                texto = WinningOption() == 1 ? dialogs[dayCount].npcAnswers.positive.mole : dialogs[dayCount].npcAnswers.negative.mole;
+                text = WinningOption() == EPeople.mole ? dialogs[dayCount].questions.positive.mole : dialogs[dayCount].questions.negative.mole;
                 break;
             case SceneConstants.Out:
-                texto = WinningOption() == 2 ? dialogs[dayCount].npcAnswers.positive.friend : dialogs[dayCount].npcAnswers.negative.friend;
+                text = WinningOption() == EPeople.friend ? dialogs[dayCount].questions.positive.friend : dialogs[dayCount].questions.negative.friend;
                 break;
         }
-       // npcQuestionText.SetText(texto);
+        return text;
+    }
+
+    private EPeople WinningOption()
+    {
+
+        var fam = PlayerPrefs.GetInt(famScore);
+        var friend = PlayerPrefs.GetInt(friendScore);
+        var mole = PlayerPrefs.GetInt(moleScore);
+
+        if (fam > friend && fam > mole)
+        {
+            return EPeople.family;
+        }
+        else if (mole > friend && mole > fam)
+        {
+            return EPeople.mole;
+        }
+        else
+        {
+            return EPeople.friend;
+        }
+
+    }
+
+    public string AnswerChooser(bool hasAccepted)
+    {
+        var text = String.Empty;
+
+        switch (currentScene.name)
+        {
+            case SceneConstants.Home:
+                if (hasAccepted)
+                {
+                    text = dialogs[dayCount].npcAnswers.positive.family;
+
+                    var score = PlayerPrefs.GetInt(famScore);
+                    score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
+                    PlayerPrefs.SetInt(famScore, score);
+
+                    dayCount++;
+                }
+                else
+                {
+                    text = dialogs[dayCount].npcAnswers.negative.family;
+                }
+                break;
+            case SceneConstants.Village:
+                if (hasAccepted)
+                {
+                    text = dialogs[dayCount].npcAnswers.positive.friend;
+
+                    var score = PlayerPrefs.GetInt(friendScore);
+                    score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
+                    PlayerPrefs.SetInt(friendScore, score);
+
+                    dayCount++;
+                }
+                else
+                {
+                    text = dialogs[dayCount].npcAnswers.negative.friend;
+                }
+                break;
+            case SceneConstants.Out:
+                if (hasAccepted)
+                {
+                    text = dialogs[dayCount].npcAnswers.positive.mole;
+
+                    var score = PlayerPrefs.GetInt(moleScore);
+                    score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
+                    PlayerPrefs.SetInt(moleScore, score);
+
+                    dayCount++;
+                }
+                else
+                {
+                    text = dialogs[dayCount].npcAnswers.negative.mole;
+                }
+                break;
+        }
+        return text;
     }
 }

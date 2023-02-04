@@ -33,9 +33,9 @@ public class QuestionsConstants
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Heeey! ¿Qué paasaa, baabyy? ¿Cómo te trata la viaa? He estao unos días fuera del pueblo y... buaf, han sio unos días chunguillos, para darle al coco y esas cosas... Y se ma ocurrio algo que nos daría LA VIDA, ¿me entiendes? Y yo sé que tú me apoyas hasta la muerte... ¿e o no e?",
+                family = "¡Buenos días, cariño! ¿Qué tal has dormido? Aquí tienes tu desayuno. Hoy he hecho tostaditas con bellota. Si no tienes nada que hacer, deberías acercarte al pueblo. ¡Hoy hay un jaleo enorme! Y mira que este pueblo es tranquilo... Ay... Me encanta este pueblo. ¿A ti te gusta?",
+                mole = "¡Hola, Chulo! ¿Puedo llamarte así? ¿Chulo? A mí me suena de fábula. Soy Topo Sandoquín, de la famosa familia Sandoquín... ¡Sí, sí, los hoteles! Acabo de llegar al pueblo en busca de un lugar dónde construir un gran proyecto, pero necesitaría un poco de apoyo... Estoy seguro de que a alguien joven y enérgico como tú le flipará. ¿Te gustaría que te contase más sobre mi idea?"
             }
         },
         playerAnswers = new Asf
@@ -76,15 +76,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Holaaaa, chatii! ¿Cómo va eso? Va venga, te lo cuento. No me hago más de rogar. ¿Y si montamos una banda de rock? Tú a la batería, yo a la guitarra... Bueno, y ya encontraremos a alguien más para completar la banda. Buah... Haríamos giras, viajaríamos por el mundo... ¿No te flipa?",
+                family = "¡Buenos días, cariñín! ¿Cómo has dormido? Hoy para desayunar tenemos bellota frita. ¿Has oído lo que se rumorea por el pueblo? Al parecer, ha llegado alguien de fuera que quiere construir no se qué edificio en el pueblo. No me gusta mucho cuando construyen cosas nuevas en el pueblo... y mucho menos si se trata de alguien que no vive aquí porque seguro que no se preocupa por las necesidades de nosotros y los habitantes del pueblo. ¿Qué opinas tú?",
+                mole = "¡Buenos días, leyenda! Me alegra verte por aquí. El caso es que quería contarte lo de mi proyecto con más detalle. Me gustaría construir una torre en el pueblo con algunas tiendecillas y un hotelilllo, nada muy ostentoso, ya sabes, para reavivar la economía y el turismo. ¡Todos salimos ganando! ¿Qué opinas? ¿Tengo tu apoyo?"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Holiiis! Va venga, te lo cuento. No me hago más de rogar. ¿Y si montamos una banda de rock? Tú a la batería, yo a la guitarra... Bueno, y ya encontraremos a alguien más para completar la banda. Buah... Haríamos giras, viajaríamos por el mundo... ¿No te flipa?",
+                family = "¡Buenos días! Hoy para desayunar tenemos bellota al vapor. ¿Has oído lo que se rumorea por el pueblo? Al parecer, ha llegado alguien de fuera que quiere construir no se qué edificio en el pueblo. No me gusta mucho cuando construyen cosas nuevas en el pueblo... y mucho menos si se trata de alguien que no vive aquí porque seguro que no se preocupa por las necesidades de nosotros y los habitantes del pueblo. ¿Qué opinas tú?",
+                mole = "Hola de nuevo. A ver, porque creo que ayer no empezamos con muy buen pie quería contarte lo de mi proyecto con más detalle. Me gustaría construir una torre en el pueblo con algunas tiendecillas y un hotelilllo, nada muy ostentoso, ya sabes, para reavivar la economía y el turismo. ¡Todos salimos ganando! ¿Qué opinas? ¿Tengo tu apoyo?"
             }
         },
         playerAnswers = new Asf
@@ -106,15 +106,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¿A que sí? Se me ocurrió a mí solito, ¿eh? Estaba en la cama comiendo techo y de repente lo vi... Los focos, el escenario, el público coreándonos...",
+                family = "Me alegro de que lo entiendas. Me deja más tranquile saber que esta familia siempre estará en buenas manos.",
+                mole = "¡Muchísimas gracias! Espero que no te importe, pero había pensado en ubicar el novedoso edificio ahí, donde está ese árbol, así estaría lo suficientemente lejos para que las obras no molesten a nadie del pueblo, y seguro que así nos apoyan."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Pero si es una idea bestial, colega. Es que estás anticuae, hermane. Pareces mi abueleee.",
+                family = "Bueno, ojalá tengas razón. Podría ser un lavado de cara al pueblo...",
+                mole = "¿Y eso? ¡Pero si lo tiene todo! De hecho, si os interesase, podríamos llegar a algún acuerdo económico que os beneficiase también a ti y a tu familia. Eso si os interesase, claro..."
             }
         },
     };
@@ -125,15 +125,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Hola, caracola! Qué movida, hermano. Acaban de decirme que necesitamos un representante. Yo no puedo serlo, que tengo movidas con el banco. ¿Y si ponemos tu nombre en el formulario y a pastar?",
+                family = "¡Buenisísimos días, chiquitín! Hoy me he levantado un poquito antes y he hecho setas con bellotitas para desayunar. Mmm... Hace mucho que no comemos ensaladita, ¿no crees? ¿Por qué no te acercas a la tienda del pueblo y compras nueces para que podamos hacerla para almorzar?",
+                mole = "¡Hey, hey! ¿Te gustaría ayudarme con una cosita para acelerar las obras del proyectito que te conté ayer? Es que necesito que alguien me ayude con un papeleo del Ayuntamiento y sé que a la gente de aquí os van a hacer más caso que a un forastero como yo. ¿Te importaría llevarle estos papeles al alcalde por mí?"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Chilindróooon, que me tienes abandonao. Qué movida, hermano. Acaban de decirme que necesitamos un representante. Yo no puedo serlo, que tengo movidas con el banco. ¿Y si ponemos tu nombre en el formulario y a pastar?",
+                family = "Buenos días. Ayer se me olvidó ir a comprar y he hecho el desayuno con lo poquito que quedaba. Estoy segure de que mañana será mejor. Mmm... Hace mucho que no comemos ensaladita, ¿no crees? ¿Por qué no te acercas a la tienda del pueblo y compras nueces para que podamos hacerla para almorzar?",
+                mole = "Oye, ¿estás liado? Es que necesito que alguien me ayude con un papeleo del Ayuntamiento y sé que a la gente de aquí os van a hacer más caso que a un forastero como yo. ¿Te importaría llevarle estos papeles al alcalde por mí?"
             }
         },
         playerAnswers = new Asf
@@ -155,15 +155,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Flipa! ¡Vamos a ser les próximes Green May!",
+                family = "¡Qué bien, qué ganas de comer ensaladita! Esta vez innovaré con la receta y le añadiré un poquito de maíz, que le dé un toque dulcecito.",
+                mole = "¡Gracias, majo! Poquito a poco y juntos, conseguiremos darle la importancia que merece a un enclave como este. ¡Ah! Se me olvidaba. Me he enterado de que vives con tu familia en el árbol que teníamos pensado talar... Si sigues conmigo, podemos llegar a un acuerdo para que tu familia y tú no os quedéis sin casa. ¡Solo tienes que apoyarme en todo!"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Pss, tampoco te me vayas a rajar ahora, ¿eh? Que ya he contratao hasta el chófer pa la caravana.",
+                family = "Pero bueno, ¿cómo que no? Tendrás que ayudar un poquito en casa. ¿Qué te crees? ¿Que esto es un hotel? No somos tus sirvientes. Para una cosa que te pido...",
+                mole = "¡Vaya mala sombra tienes! Ni un favor puedes hacerme. Vaya con la gente de este pueblo. No os merecéis el esfuerzo y la inversión que estoy haciendo para vosotros."
             }
         },
     };
@@ -176,13 +176,13 @@ public class QuestionsConstants
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "Vaya... Hola... Siento que me veas tan alicaído, es que no estoy recibiendo mucho apoyo de parte del pueblo para mi proyecto... y mira que lo hago por el bien de toda esta gente y por los extranjeros interesados en vivir la cultura del pueblo... ¿a ti te gusta viajar?"
             },
             negative = new People
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "Mira, sé que ayer no estabas muy receptivo, todos tenemos días malos, Es que no estoy recibiendo mucho apoyo de parte del pueblo para mi proyecto... y mira que lo hago por el bien de toda esta gente y por los extranjeros interesados en vivir la cultura del pueblo... ¿a ti te gusta viajar?"
             }
         },
         playerAnswers = new Asf
@@ -206,13 +206,13 @@ public class QuestionsConstants
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "¡Claro que sí! ¿Cómo no te va a gustar? Visitar sitios nuevos, hacerse fotitos para fardarle a tus amigos, probar chocolates de diferentes orígenes, por que eso es lo que coméis vosotros, ¿no? Claro, sí, chocolate. Además de sacar estereotipos de cada pueblo, como las hurracas... ¡Qué agarradas son, las malnacidas! ¡Que yo tengo amigas hurracas, eh! Jajajaja... Tú ya me entiendes."
             },
             negative = new People
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "Tus razones tendrás, supongo. Tampoco te quiero imponer mi opinión, pero me da a mí que tú no has salido mucho del pueblo, ¿verdad? Espero que salgáis pronto tu familia y tú."
             }
         },
     };
