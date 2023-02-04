@@ -18,8 +18,8 @@ public class PlayerScript : MonoBehaviour
 
     PlayerMovement movement;
     public bool isPlayerTouchingDoor;
-    public bool isPlayerOnExit;
     public bool isPlayerOnPath;
+    public bool isPlayerOnNpc;
 
     void Awake()
     {
@@ -38,6 +38,8 @@ public class PlayerScript : MonoBehaviour
         isPlayerTouchingDoor = other.gameObject.CompareTag(TagConstants.Door);
 
         isPlayerOnPath = other.gameObject.CompareTag(TagConstants.Path);
+
+        isPlayerOnNpc = other.gameObject.CompareTag(TagConstants.Npc);
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -49,6 +51,9 @@ public class PlayerScript : MonoBehaviour
                 break;
             case TagConstants.Path:
                 isPlayerOnPath = false;
+                break;
+            case TagConstants.Npc:
+                isPlayerOnNpc = false;
                 break;
             default:
                 break;

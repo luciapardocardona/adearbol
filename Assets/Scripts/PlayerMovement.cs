@@ -76,22 +76,29 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnAction(InputValue value)
     {
-        var text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ESTO ES EL FINAL";
-        
-        var totalSections = Mathf.Ceil(text.Length / charPerDialog);
-
-        if (totalSections >= dialogSection)
+        if (playerScript.isPlayerTouchingDoor || playerScript.isPlayerOnPath)
         {
-            this.dialogText.enabled = true;
+            this.gameManager.HandleSceneTransition();
+        }
+        else if (playerScript.isPlayerOnNpc)
+        {
+            var text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ESTO ES EL FINAL";
 
-            this.runSpeed = 0f;
+            var totalSections = Mathf.Ceil(text.Length / charPerDialog);
 
-            // var totalCharToShow = (dialogSection + 1) * charPerDialog > text.Length ? text.Length - (dialogSection * charPerDialog) : charPerDialog;
+            if (totalSections >= dialogSection)
+            {
+                this.dialogText.enabled = true;
 
-            this.dialogText.text = text;
+                this.runSpeed = 0f;
+
+                // var totalCharToShow = (dialogSection + 1) * charPerDialog > text.Length ? text.Length - (dialogSection * charPerDialog) : charPerDialog;
+
+                this.dialogText.text = text;
                 // .Substring(dialogSection * charPerDialog, totalCharToShow);
-            dialogSection++;
-        }        
+                dialogSection++;
+            }
+        } 
     }
 
     void OnEscape(InputValue value)
