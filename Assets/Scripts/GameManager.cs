@@ -35,80 +35,63 @@ public class GameManager : MonoBehaviour
     PlayerScript playerScript;
     private void Awake()
     {
+        GameObject gameObject = GameObject.Find("Squirrel");
         player = GameObject.Find("Squirrel");
         player = GameObject.Find("NPC");
 
         currentScene = SceneManager.GetActiveScene();
 
-        //playerScript = gameObject.GetComponent<PlayerScript>();
+        playerScript = gameObject.GetComponent<PlayerScript>();
         sound = GetComponent<AudioSource>();
         QuestionChooser();
         AnswerChooser();
     }
 
-    // public void HandleSceneTransition()
-    // {
-    //     // var currentScene = SceneManager.GetActiveScene();
+    public void HandleSceneTransition()
+    {
+         var currentScene = SceneManager.GetActiveScene();
 
-    //     //if(currentScene.name != SceneConstants.Nivel1)
-    //     //{
-    //     //    sound.PlayOneShot(soundWoodDoor);
-    //     //}
+         switch (currentScene.name)
+         {
+          case SceneConstants.Home:
+                if (playerScript.isPlayerTouchingDoor)
+                {
+                    this.nextScene = SceneConstants.Out;
+                    this.GoToNextScene();
+                }
+               break;
+           case SceneConstants.Out:
+                if (playerScript.isPlayerTouchingDoor)
+                {
+                    this.nextScene = SceneConstants.Home;
+                    this.GoToNextScene();
+                }
+                else if (this.playerScript.isPlayerOnPath)
+                {
+                    this.nextScene = SceneConstants.Village;
+                    this.GoToNextScene();
+                };
+                break;
+           case SceneConstants.Village:
+                if (playerScript.isPlayerOnPath)
+                {
+                    this.nextScene = SceneConstants.Out;
+                    this.GoToNextScene();
+                }
+                break;
 
-    //     // switch (currentScene.name)
-    //     // {
-    //         //case SceneConstants.Nivel1:
-    //         //    myAnimator = GameObject.Find("Door").GetComponentInChildren<Animator>();
-    //         //    myAnimator.SetBool(AnimationConstants.action, true);
-    //         //    this.nextScene = SceneConstants.Nivel2;
-    //         //    sound.PlayOneShot(soundMetalDoor);
-    //         //    Invoke(nameof(GoToNextScene), 2f);
-    //         //    break;
-    //         //case SceneConstants.Nivel2:
-    //         //    if (playerScript.isPlayerOnExit) //isCorrectDoor
-    //         //    {
-    //         //        myAnimator = GameObject.Find("Purple Door").GetComponentInChildren<Animator>();
-    //         //        myAnimator.SetBool(AnimationConstants.action, true);
-    //         //        this.nextScene = SceneConstants.Nivel3;
-    //         //        Invoke(nameof(GoToNextScene), 2f);
-    //         //    }
-    //         //    else
-    //         //    {
-    //         //        myAnimator = GameObject.Find("Green Door").GetComponentInChildren<Animator>();
-    //         //        myAnimator.SetBool(AnimationConstants.action, true);
-    //         //        Invoke(nameof(ReloadLevel), 2f);
-    //         //    }
-    //         //    break;
-    //         //case SceneConstants.Nivel3:
-    //         //    if(playerScript.isPlayerOnExit)
-    //         //    {
-    //         //        myAnimator = GameObject.Find("Green Door").GetComponentInChildren<Animator>();
-    //         //        myAnimator.SetBool(AnimationConstants.action, true);
-    //         //        this.nextScene = SceneConstants.FinalBueno;
-    //         //        Invoke(nameof(GoToNextScene), 2f);                    
-    //         //    }
-    //         //    else
-    //         //    {
-    //         //        myAnimator = GameObject.Find("Purple Door").GetComponentInChildren<Animator>();
-    //         //        myAnimator.SetBool(AnimationConstants.action, true);
-    //         //        this.nextScene = SceneConstants.FinalMalo;
-    //         //        Invoke(nameof(GoToNextScene), 2f);
-    //         //    }
-    //         //    break;
-    //         //case SceneConstants.Creditos:
-    //         //    break;
-    //     }
-    // }
+        }
+    }
 
-    // private void ReloadLevel()
-    // {
-    //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    // }
+    private void ReloadLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 
-    // private void GoToNextScene()
-    // {
-    //     SceneManager.LoadScene(this.nextScene);
-    // }
+    private void GoToNextScene()
+    {
+        SceneManager.LoadScene(this.nextScene);
+    }
 
     private void QuestionChooser(bool reading = false)
     {
@@ -124,38 +107,20 @@ public class GameManager : MonoBehaviour
 
             switch (currentScene.name)
             {
-                case "home":
+                case SceneConstants.Home:
                     texto = WinningOption() == 0 ? dialogs[dayCount].questions.positive.family : dialogs[dayCount].questions.negative.family;
                     break;
-                case "village":
+                case SceneConstants.Village:
                     texto = WinningOption() == 1 ? dialogs[dayCount].questions.positive.mole : dialogs[dayCount].questions.negative.mole;
                     break;
-                case "out":
+                case SceneConstants.Out:
                     texto = WinningOption() == 2 ? dialogs[dayCount].questions.positive.friend : dialogs[dayCount].questions.negative.friend;
                     break;
             }
-            npcQuestionText.SetText(texto);
+            //npcQuestionText.SetText(texto);
         }
     }
-
-    private void AnswerChooser()
-    {
-        var texto = "";
-
-        switch (currentScene.name)
-        {
-            case "home":
-                texto = WinningOption() == 0 ? dialogs[dayCount].npcAnswers.positive.family : dialogs[dayCount].npcAnswers.negative.family;
-                break;
-            case "village":
-                texto = WinningOption() == 1 ? dialogs[dayCount].npcAnswers.positive.mole : dialogs[dayCount].npcAnswers.negative.mole;
-                break;
-            case "out":
-                texto = WinningOption() == 2 ? dialogs[dayCount].npcAnswers.positive.friend : dialogs[dayCount].npcAnswers.negative.friend;
-                break;
-        }
-        npcQuestionText.SetText(texto);
-    }
+    
 
     private int WinningOption()
     {
@@ -172,5 +137,24 @@ public class GameManager : MonoBehaviour
             return 2;
         }
 
+    }
+
+    private void AnswerChooser()
+    {
+        var texto = "";
+
+        switch (currentScene.name)
+        {
+            case SceneConstants.Home:
+                texto = WinningOption() == 0 ? dialogs[dayCount].npcAnswers.positive.family : dialogs[dayCount].npcAnswers.negative.family;
+                break;
+            case SceneConstants.Village:
+                texto = WinningOption() == 1 ? dialogs[dayCount].npcAnswers.positive.mole : dialogs[dayCount].npcAnswers.negative.mole;
+                break;
+            case SceneConstants.Out:
+                texto = WinningOption() == 2 ? dialogs[dayCount].npcAnswers.positive.friend : dialogs[dayCount].npcAnswers.negative.friend;
+                break;
+        }
+       // npcQuestionText.SetText(texto);
     }
 }
