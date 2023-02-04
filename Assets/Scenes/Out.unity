@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 917366146, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1935742069}
     - target: {fileID: 1461598484191854214, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -178,8 +182,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: Npc
       objectReference: {fileID: 0}
+    - target: {fileID: 6600354333500063171, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959809817409842819, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1935742069}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
+--- !u!114 &1354836731 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6600354333500063171, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}
+  m_PrefabInstance: {fileID: 1354836730}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1363716613
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,6 +312,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 153949829333703770, guid: 7b7e80efea0ce274ab37a02629b4b22a, type: 3}
+      propertyPath: dialogText
+      value: 
+      objectReference: {fileID: 1354836731}
     - target: {fileID: 153949829333703773, guid: 7b7e80efea0ce274ab37a02629b4b22a, type: 3}
       propertyPath: m_Name
       value: Squirrel

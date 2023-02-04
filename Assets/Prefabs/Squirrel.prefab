@@ -149,6 +149,7 @@ MonoBehaviour:
   runSpeed: 5
   dialogText: {fileID: 0}
   charPerDialog: 50
+  myRigidbody: {fileID: 0}
 --- !u!1 &4461888036995378130
 GameObject:
   m_ObjectHideFlags: 0

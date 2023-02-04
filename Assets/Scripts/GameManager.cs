@@ -150,10 +150,10 @@ public class GameManager : MonoBehaviour
             case SceneConstants.Home:
                 text = WinningOption() == EPeople.family ? dialogs[dayCount].questions.positive.family : dialogs[dayCount].questions.negative.family;
                 break;
-            case SceneConstants.Village:
+            case SceneConstants.Out:
                 text = WinningOption() == EPeople.mole ? dialogs[dayCount].questions.positive.mole : dialogs[dayCount].questions.negative.mole;
                 break;
-            case SceneConstants.Out:
+            case SceneConstants.Village:
                 text = WinningOption() == EPeople.friend ? dialogs[dayCount].questions.positive.friend : dialogs[dayCount].questions.negative.friend;
                 break;
         }
