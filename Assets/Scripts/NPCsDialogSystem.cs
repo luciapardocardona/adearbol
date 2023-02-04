@@ -6,10 +6,12 @@ using UnityEngine;
 public class NPCsDialogSystem : MonoBehaviour
 {
     [SerializeField]
-    TextMeshProUGUI dialog;
+    TextMeshProUGUI dialogButton;
 
     [SerializeField]
     List<string> dialogs;
+
+    bool isPlayerOnCharacter;
 
     //[SerializeField] AudioClip soundnpc;
 
@@ -19,21 +21,23 @@ public class NPCsDialogSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        dialog.enabled = false;
+        dialogButton.enabled = false;
+        isPlayerOnCharacter = false;
         //sound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        dialog.text = this.dialogs[selectedText];
+    { 
+        // Show button to press
+        dialogButton.text = "Press button";
         //sound.PlayOneShot(soundnpc);
-        dialog.enabled = true;
+        dialogButton.enabled = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        dialog.text = string.Empty;
-        dialog.enabled = false;
+        dialogButton.text = string.Empty;
+        dialogButton.enabled = false;
     }
 }
