@@ -146,9 +146,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0163bceab6e340a4fae80c44a375d8e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 8
+  runSpeed: 1
   jumpSpeed: 15
   monsters: []
+  dialogText: {fileID: 0}
+  charPerDialog: 50
   soundJump: {fileID: 0}
 --- !u!1 &4461888036995378130
 GameObject:
@@ -160,6 +162,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5623593257309890102}
   - component: {fileID: 6685753768208712657}
+  - component: {fileID: 1383498341890999236}
   m_Layer: 0
   m_Name: Prota_Ardilla
   m_TagString: Untagged
@@ -234,3 +237,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1383498341890999236
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4461888036995378130}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1750ffe32722d6f46a6dd1ffb5242a63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

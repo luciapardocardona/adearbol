@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float runSpeed = 8f;
     [SerializeField] float jumpSpeed = 15f;
     [SerializeField] List<GameObject> monsters;
+    [SerializeField]
+    TextMeshProUGUI dialogText;
+    [SerializeField]
+    int charPerDialog = 50;
+
+    int dialogSection = 0;
     GameManager gameManager;
     NPCsMovement nPCsMovement;
     PlayerScript playerScript;
@@ -69,26 +76,24 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnAction(InputValue value)
     {
-        //if (playerScript.isPlayerTouchingDoor)
-        //{
-        //    gameManager.HandleSceneTransition();
-        //}
-        //else if (playerScript.isPlayerOnSwitch)
-        //{
-        //    if (scene == SceneConstants.Nivel3)
-        //    {
-        //        switchScript.isLightOn = !switchScript.isLightOn;
-        //        nPCsMovement.MoveMonsters();
-        //    }
-        //    else
-        //    {
-        //        switchScript.isLightOn = true;
-        //    }
-        //    switchScript.ToggleLight();
-        //    TogglePlayerColor();
+        var text = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy ESTO ES EL FINAL";
+        
+        var totalSections = Mathf.Ceil(text.Length / charPerDialog);
 
-        //}
+        if (totalSections >= dialogSection)
+        {
+            this.dialogText.enabled = true;
+
+            this.runSpeed = 0f;
+
+            // var totalCharToShow = (dialogSection + 1) * charPerDialog > text.Length ? text.Length - (dialogSection * charPerDialog) : charPerDialog;
+
+            this.dialogText.text = text;
+                // .Substring(dialogSection * charPerDialog, totalCharToShow);
+            dialogSection++;
+        }        
     }
+
     void OnEscape(InputValue value)
     {
        // SceneManager.LoadScene(SceneConstants.Menu);
