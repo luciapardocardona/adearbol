@@ -331,6 +331,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 153949829333703770, guid: 7b7e80efea0ce274ab37a02629b4b22a, type: 3}
+      propertyPath: runSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 153949829333703773, guid: 7b7e80efea0ce274ab37a02629b4b22a, type: 3}
       propertyPath: m_Name
       value: Squirrel
@@ -443,6 +447,10 @@ PrefabInstance:
     - target: {fileID: 2745215945338137350, guid: e266b0a9f916b3d48b0de50a0a3e8e28, type: 3}
       propertyPath: m_LocalPosition.x
       value: -10.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 2745215946535454564, guid: e266b0a9f916b3d48b0de50a0a3e8e28, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.34
       objectReference: {fileID: 0}
     - target: {fileID: 2745215946856288409, guid: e266b0a9f916b3d48b0de50a0a3e8e28, type: 3}
       propertyPath: m_LocalPosition.y
