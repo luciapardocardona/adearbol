@@ -19,7 +19,7 @@ public class PlayerScript : MonoBehaviour
     PlayerMovement movement;
     public bool isPlayerTouchingDoor;
     public bool isPlayerOnExit;
-    public bool isPlayerOnSwitch;
+    public bool isPlayerOnPath;
 
     void Awake()
     {
@@ -35,32 +35,23 @@ public class PlayerScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        //// Si entra en una puerta
-        //isPlayerTouchingDoor = other.gameObject.CompareTag(TagConstants.Door);
+        isPlayerTouchingDoor = other.gameObject.CompareTag(TagConstants.Door);
 
-        //if (isPlayerTouchingDoor)
-        //{
-        //    isPlayerOnExit = other.gameObject.GetComponent<DoorScript>().isCorrectDoor;
-        //}
-        //else
-        //{
-        //    isPlayerOnSwitch = other.gameObject.CompareTag(TagConstants.Switch);
-        //}
+        isPlayerOnPath = other.gameObject.CompareTag(TagConstants.Path);
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        //switch (other.gameObject.tag)
-        //{
-        //    case TagConstants.Door:
-        //        isPlayerTouchingDoor = false;
-        //        isPlayerOnExit = false;
-        //        break;
-        //    case TagConstants.Switch:
-        //        isPlayerOnSwitch = false;
-        //        break;
-        //    default:
-        //        break;
-        //}
+        switch (other.gameObject.tag)
+        {
+            case TagConstants.Door:
+                isPlayerTouchingDoor = false;
+                break;
+            case TagConstants.Path:
+                isPlayerOnPath = false;
+                break;
+            default:
+                break;
+        }
     }
 }
