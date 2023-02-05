@@ -51,9 +51,7 @@ public class GameManager : MonoBehaviour
 
 
         dayCount = PlayerPrefs.GetInt(day, 0);
-        PlayerPrefs.SetInt(famScore, 0);
-        PlayerPrefs.SetInt(moleScore, 0);
-        PlayerPrefs.SetInt(friendScore, 0);
+
 
         if (dayCount > 4)
         {
@@ -72,6 +70,9 @@ public class GameManager : MonoBehaviour
             if (currentScene.name == SceneConstants.Play)
             {
                 PlayerPrefs.SetInt(day, 0);
+                PlayerPrefs.SetInt(famScore, 0);
+                PlayerPrefs.SetInt(moleScore, 0);
+                PlayerPrefs.SetInt(friendScore, 0);
             }
 
             GameObject gameObject = GameObject.Find("Squirrel");
