@@ -15,6 +15,9 @@ public class PlayerScript : MonoBehaviour
     AudioSource sonido;
     GameObject padre;
     CapsuleCollider2D capsule;
+    [SerializeField] GameObject signButton;
+    [SerializeField] GameObject doorButton;
+
 
     PlayerMovement movement;
     public bool isPlayerTouchingDoor;
@@ -40,6 +43,16 @@ public class PlayerScript : MonoBehaviour
         isPlayerOnPath = other.gameObject.CompareTag(TagConstants.Path);
 
         isPlayerOnNpc = other.gameObject.CompareTag(TagConstants.Npc);
+
+        if (isPlayerOnPath)
+        {
+            signButton.SetActive(true);
+        }
+
+        if (isPlayerTouchingDoor)
+        {
+            doorButton.SetActive(true);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -48,9 +61,11 @@ public class PlayerScript : MonoBehaviour
         {
             case TagConstants.Door:
                 isPlayerTouchingDoor = false;
+                doorButton.SetActive(false);
                 break;
             case TagConstants.Path:
                 isPlayerOnPath = false;
+                signButton.SetActive(false);
                 break;
             case TagConstants.Npc:
                 isPlayerOnNpc = false;

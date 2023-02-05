@@ -174,14 +174,14 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
+                friend = "¡Hola, mequetrefe! Hay una pregunta que llevo pexá tiempo planteándome y me ralla cantidubi... Si tuvieras que elegir entre vivir en un peazo rascielos en la big city, o morirte del asco con los viejos del pueblo en este pozo... Te decantarías por la big city, ¿no?",
+                family = "¡Buenos días, florecilla! Hoy para desayunar he ido a por churritos con cremita de bellota. Por cierto, últimamente pasas mucho tiempo fuera... Estoy preocupade por ti. El otro día te vi tirar un pañuelito al suelo. Nuestra familia siempre ha sido fiel defensora de la preservación del bosque, ¿no te parece?",
                 mole = "Vaya... Hola... Siento que me veas tan alicaído, es que no estoy recibiendo mucho apoyo de parte del pueblo para mi proyecto... y mira que lo hago por el bien de toda esta gente y por los extranjeros interesados en vivir la cultura del pueblo... ¿a ti te gusta viajar?"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
+                friend = "¡Eh! ¡Cabeza bellota! Hay una pregunta que llevo pexá tiempo planteándome y me ralla cantidubi... Si tuvieras que elegir entre vivir en un peazo rascielos en la big city, o morirte del asco con los viejos del pueblo en este pozo... Te decantarías por la big city, ¿no?",
+                family = "Por fin te levantas. Hoy no me ha dado tiempo a prepararte el desayuno... Coge algo de dinero y sales a desayunar fuera. Por cierto, últimamente pasas mucho tiempo fuera... Estoy preocupade por ti. El otro día te vi tirar un pañuelito al suelo. Nuestra familia siempre ha sido fiel defensora de la preservación del bosque, ¿no te parece?",
                 mole = "Mira, sé que ayer no estabas muy receptivo, todos tenemos días malos, Es que no estoy recibiendo mucho apoyo de parte del pueblo para mi proyecto... y mira que lo hago por el bien de toda esta gente y por los extranjeros interesados en vivir la cultura del pueblo... ¿a ti te gusta viajar?"
             }
         },
@@ -204,14 +204,14 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
+                friend = "¡YIII-JAA! La big city es lo más. Prepárate. Nos espera una vida de rockstars.",
+                family = "Exacto, el bosque es nuestro amigo. Nosotres cuidamos de el bosque, y él cuida de nosotres. Todos le debemos mucho.",
                 mole = "¡Claro que sí! ¿Cómo no te va a gustar? Visitar sitios nuevos, hacerse fotitos para fardarle a tus amigos, probar chocolates de diferentes orígenes, por que eso es lo que coméis vosotros, ¿no? Claro, sí, chocolate. Además de sacar estereotipos de cada pueblo, como las hurracas... ¡Qué agarradas son, las malnacidas! ¡Que yo tengo amigas hurracas, eh! Jajajaja... Tú ya me entiendes."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
+                friend = "Sí, claro, y ahora me dirás que también prefieres el tocino a la velocidad. Vete a casa y mañana me dices.",
+                family = "¿Cómo dices? No vuelvas a decir algo así en esta casa. Y menos aún en el pueblo. Alguien podría oírte, y quién sabe qué podrían hacernos.",
                 mole = "Tus razones tendrás, supongo. Tampoco te quiero imponer mi opinión, pero me da a mí que tú no has salido mucho del pueblo, ¿verdad? Espero que salgáis pronto tu familia y tú."
             }
         },
@@ -223,15 +223,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Cómo está mi roedor favorito! Ya he metio to mi equipaje en la caravana, ya tenemos al chófer, obviamente, porque yo paaaso de conducir.",
+                family = "¡Buenos días, mi amor! Hoy he hecho huevos de codorniz con trufitas silvestres y esencia de bellota fresca para desayunar, ¡tus preferidos! Al parecer, el señor Mole piensa construir una torre en algún lugar del pueblo. Deberíamos pararle los pies. No podrá acabar con nuestro hogar bajo ningún concepto. ¿Te unirás a nosotres en su contra?",
+                mole = "Muchas gracias por venir a verme. Estoy desesperado. Este pueblo está lleno de inconscientes... ¿Cómo puede ser que a nadie le guste mi ideaza? Pero si mi torre va a quedar monísima. No tiene ni una pega. Dime, ¿podré confiar en ti para el resto de las obras de la torre?"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Loco! Ya he metio to mi equipaje en la caravana, ya tenemos al chófer, obviamente, porque yo paaaso de conducir.",
+                family = "... Al parecer, el señor Mole piensa construir una torre en algún lugar del pueblo. Deberíamos pararle los pies. No podrá acabar con nuestro hogar bajo ningún concepto. ¿Te unirás a nosotres en su contra?",
+                mole = "No me lo puedo creer. Estoy desesperado. Este pueblo está lleno de inconscientes... ¿Cómo puede ser que a nadie le guste mi ideaza? Pero si mi torre va a quedar monísima. No tiene ni una pega. Dime, ¿podré confiar en ti para el resto de las obras de la torre?"
             }
         },
         playerAnswers = new Asf
@@ -253,15 +253,15 @@ public class QuestionsConstants
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡NIQUELAO! Mete la batería donde sea que se guarden las baterías, dile bye a tus progenitores y vámonos ¡YA!",
+                family = "Ayy... Perdona, me he... dejado llevar. Te quiero mucho, mi niñe... Estoy muy orgullose de ti. Permanezcamos unides como una familia.",
+                mole = "Sabía que lo comprenderías y me apoyarías. Te estaré agradecido para siempre. Vamos a hacer esto juntos. Por fin mi padre podrá sentirse orgulloso de mí."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "No se te ve con muchas ganas de venirte. SI quieres quedarte en el pueblo, dímelo y ya, que tampoco me voy a cabrear...",
+                family = "No tengo palabras. Me rompes el corazón.... Por favor, desaparece de mi vista ahora mismo. Algún día te arrepentirás de lo que acabas de decir.",
+                mole = "¿En serio? Claro, era de esperar. Nadie es de fiar por estos lares así que tendré que apañármelas yo solito. Me cansé de hablar contigo. Que te vaya bien la vida."
             }
         },
     };
