@@ -299,6 +299,7 @@ public class GameManager : MonoBehaviour
                 if (hasAccepted)
                 {
                     text = dialogs[dayCount].npcAnswers.positive.family;
+                    sound.PlayOneShot(dubbingAnswerPositiveFam[dayCount]);
 
                     var score = PlayerPrefs.GetInt(famScore);
                     score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
@@ -307,12 +308,14 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     text = dialogs[dayCount].npcAnswers.negative.family;
+                    sound.PlayOneShot(dubbingAnswerNegativeFam[dayCount]);
                 }
                 break;
             case SceneConstants.Village:
                 if (hasAccepted)
                 {
                     text = dialogs[dayCount].npcAnswers.positive.friend;
+                    sound.PlayOneShot(dubbingAnswerPositiveFriend[dayCount]);
 
                     var score = PlayerPrefs.GetInt(friendScore);
                     score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
@@ -321,12 +324,14 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     text = dialogs[dayCount].npcAnswers.negative.friend;
+                    sound.PlayOneShot(dubbingAnswerNegativeFriend[dayCount]);
                 }
                 break;
             case SceneConstants.Out:
                 if (hasAccepted)
                 {
                     text = dialogs[dayCount].npcAnswers.positive.mole;
+                    sound.PlayOneShot(dubbingAnswerPositiveMole[dayCount]);
 
                     var score = PlayerPrefs.GetInt(moleScore);
                     score += (dayCount == 1 || dayCount == 4) ? 2 : 1;
@@ -335,18 +340,17 @@ public class GameManager : MonoBehaviour
                 else
                 {
                     text = dialogs[dayCount].npcAnswers.negative.mole;
+                    sound.PlayOneShot(dubbingAnswerNegativeMole[dayCount]);
                 }
                 break;
         }
 
         dayCount++;
         PlayerPrefs.SetInt(day, dayCount);
-        Debug.Log(dayCount);
-        Invoke("MoveToNewDay", 3);
         return text;
     }
 
-    private void MoveToNewDay()
+    public void MoveToNewDay()
     {
         HandleSceneTransition(true);
     }
