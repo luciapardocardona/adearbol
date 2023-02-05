@@ -63,11 +63,21 @@ public class PlayerMovement : MonoBehaviour
 
     void OnAnyButton()
     {
-        this.gameManager.HandleSceneTransition();
+        var currentScene = SceneManager.GetActiveScene();
+        if (currentScene.name == SceneConstants.Play)
+        {
+            this.gameManager.HandleSceneTransition();
+        }
+        else if (hasAlreadyAnswered)
+        {
+            gameManager.MoveToNewDay();
+        }
+
     }
 
     void OnAction(InputValue value)
     {
+        sound.Stop();
         if (playerScript.isPlayerTouchingDoor || playerScript.isPlayerOnPath)
         {
             this.gameManager.HandleSceneTransition();
@@ -111,6 +121,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCancel()
     {
+        sound.Stop();
+
         runSpeed = 5f;
         dialogText.gameObject.SetActive(false);
         positiveAnswerDialogText.gameObject.SetActive(false);
@@ -119,9 +131,11 @@ public class PlayerMovement : MonoBehaviour
         dialogButton.SetActive(true);
         buttonText.enabled = true;
     }
-    
+
     void OnDecline()
     {
+        sound.Stop();
+
         if (!hasAlreadyAnswered)
         {
             hasAlreadyAnswered = true;
