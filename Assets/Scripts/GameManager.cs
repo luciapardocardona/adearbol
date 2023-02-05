@@ -89,6 +89,14 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            Application.Quit();
+        }
+    }
+
     private void MoveToHomeAgain()
     {
         HandleSceneTransition();
