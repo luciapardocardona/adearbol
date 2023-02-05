@@ -746,6 +746,8 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4b8dae08a06227849aa3b7fb6520e539, type: 3}
   dubbingAnswerNegativeFam: []
   dubbingAnswerNegativeFriend: []
+  signButton: {fileID: 509204798}
+  doorButton: {fileID: 1042926761}
 --- !u!4 &1871106326
 Transform:
   m_ObjectHideFlags: 0

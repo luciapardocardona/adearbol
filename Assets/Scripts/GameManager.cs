@@ -16,10 +16,10 @@ public class GameManager : MonoBehaviour
         QuestionsConstants.day5
     };
 
-    [SerializeField] AudioClip[] dubbingQuestionsMole;
+    [SerializeField] AudioClip[] dubbingQuestionsMole = Array.Empty<AudioClip>();
     [SerializeField] AudioClip[] dubbingQuestionsFam;
     [SerializeField] AudioClip[] dubbingQuestionsFriend;
-    [SerializeField] AudioClip[] dubbingQuestionsNegativeMole;
+    [SerializeField] AudioClip[] dubbingQuestionsNegativeMole = Array.Empty<AudioClip>();
     [SerializeField] AudioClip[] dubbingQuestionsNegativeFam;
     [SerializeField] AudioClip[] dubbingQuestionsNegativeFriend;
     [SerializeField] AudioClip[] dubbingAnswerPositiveMole;
@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     private string nextScene;
     PlayerScript playerScript;
     PlayerMovement playerMovement;
+
+
+    [SerializeField] GameObject signButton;
+    [SerializeField] GameObject doorButton;
 
     private void Awake()
     {
@@ -76,6 +80,8 @@ public class GameManager : MonoBehaviour
             if (PlayerPrefs.GetInt("fromVillage") == 0)
             {
                 gameObject.transform.position = new Vector3(6, -3.2f, 0);
+                signButton.SetActive(true);
+                doorButton.SetActive(false);
             }
         }
     }
@@ -200,13 +206,40 @@ public class GameManager : MonoBehaviour
         switch (currentScene.name)
         {
             case SceneConstants.Home:
-                text = WinningOption() == EPeople.family ? dialogs[dayCount].questions.positive.family : dialogs[dayCount].questions.negative.family;
+                if (WinningOption() == EPeople.family)
+                {
+                    text = dialogs[dayCount].questions.positive.family;
+                    sound.PlayOneShot(dubbingQuestionsFam[dayCount]);
+                }
+                else
+                {
+                    text = dialogs[dayCount].questions.negative.family;
+                    sound.PlayOneShot(dubbingQuestionsNegativeFam[dayCount]);
+                }
                 break;
             case SceneConstants.Out:
-                text = WinningOption() == EPeople.mole ? dialogs[dayCount].questions.positive.mole : dialogs[dayCount].questions.negative.mole;
+                if (WinningOption() == EPeople.mole)
+                {
+                    text = dialogs[dayCount].questions.positive.mole;
+                    sound.PlayOneShot(dubbingQuestionsMole[dayCount]);
+                }
+                else
+                {
+                    text = dialogs[dayCount].questions.negative.mole;
+                    sound.PlayOneShot(dubbingQuestionsNegativeMole[dayCount]);
+                }
                 break;
             case SceneConstants.Village:
-                text = WinningOption() == EPeople.friend ? dialogs[dayCount].questions.positive.friend : dialogs[dayCount].questions.negative.friend;
+                if (WinningOption() == EPeople.friend)
+                {
+                    text = dialogs[dayCount].questions.positive.friend;
+                    sound.PlayOneShot(dubbingQuestionsFriend[dayCount]);
+                }
+                else
+                {
+                    text = dialogs[dayCount].questions.negative.friend;
+                    sound.PlayOneShot(dubbingQuestionsNegativeFriend[dayCount]);
+                }
                 break;
         }
         return text;
