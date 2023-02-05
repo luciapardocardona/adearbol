@@ -17,5 +17,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Village.unity
     guid: 51fcab3360d41454a808b26406458ee3
+  - enabled: 1
+    path: Assets/Scenes/Play.unity
+    guid: 122bd0882369ed549a7cf1a86fac5cc1
+  - enabled: 1
+    path: Assets/Scenes/NewDay.unity
+    guid: 635d3f7b467b53b4c88a9f30f6ce0439
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 8dde27f4da0031e488231f5cfbb9cbc0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b77378e2cdbfd9a449516f5bebf871ba, type: 2}

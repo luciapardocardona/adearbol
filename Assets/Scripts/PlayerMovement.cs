@@ -57,6 +57,11 @@ public class PlayerMovement : MonoBehaviour
         moveInput = value.Get<Vector2>();
     }
 
+    void OnAnyButton()
+    {
+        this.gameManager.HandleSceneTransition();
+    }
+
     void OnAction(InputValue value)
     {
         if (playerScript.isPlayerTouchingDoor || playerScript.isPlayerOnPath)
