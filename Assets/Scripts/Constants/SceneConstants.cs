@@ -10,4 +10,13 @@ public class SceneConstants
     public const string Play = "Play";
     public const string Credits = "Credits";
     public const string NewDay = "NewDay";
+    public const string Luxurytree = "Luxurytree";
+    public const string MalasInfluencias = "MalasInfluencias";
+    public const string AsiEsLaFamiliaArdilla = "AsiEsLaFamiliaArdilla";
+    public const string AtencionALasMusaranas = "AtencionALasMusaranas";
+    public const string Greenburg = "Greenburg";
+    public const string NoTeFiesDeTuSombra = "NoTeFiesDeTuSombra";
+    public const string LosOdiosos3 = "LosOdiosos3";
+    public const string VillageRoyale = "VillageRoyale";
+    public const string NewBegs = "NewBegs";
 }
