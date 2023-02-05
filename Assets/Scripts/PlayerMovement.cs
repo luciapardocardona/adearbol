@@ -64,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
     void OnAnyButton()
     {
         var currentScene = SceneManager.GetActiveScene();
-        if (currentScene.name == SceneConstants.Play)
+
+        if (currentScene.name != SceneConstants.Home && currentScene.name != SceneConstants.Village && currentScene.name != SceneConstants.Out)
         {
             this.gameManager.HandleSceneTransition();
         }
@@ -72,7 +73,6 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.MoveToNewDay();
         }
-
     }
 
     void OnAction(InputValue value)

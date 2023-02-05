@@ -53,5 +53,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Finals/VillageRoyale.unity
     guid: 0788c150237356e44afc2de18dc3755b
+  - enabled: 1
+    path: Assets/Scenes/Instructions.unity
+    guid: b145da3f33b6f844eaf1fd529dc1f2bd
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: b77378e2cdbfd9a449516f5bebf871ba, type: 2}

@@ -52,10 +52,9 @@ public class GameManager : MonoBehaviour
 
         dayCount = PlayerPrefs.GetInt(day, 0);
 
-        if (dayCount == 4)
+        if (dayCount > 4)
         {
             PercentageCalculation();
-            nextScene = SceneConstants.Credits;
             PlayerPrefs.SetInt(day, 0);
             GoToNextScene();
         }
@@ -102,38 +101,47 @@ public class GameManager : MonoBehaviour
         if (percentageFamily - masmenos > 100 - rango) // 1
         {
             // final fam 100%
+            nextScene = SceneConstants.AsiEsLaFamiliaArdilla;
         }
         else if (percentageFriend - masmenos > 100 - rango) // 2
         {
             // final friend 100%
+            nextScene = SceneConstants.MalasInfluencias;
         }
         else if (percentageMole - masmenos > 100 - rango) // 3
         {
             // final mole 100%
+            nextScene = SceneConstants.Luxurytree;
         }
         else if (percentageFamily - masmenos > 75 - rango) //4
         {
             // final fam 75 y friend 25
+            nextScene = SceneConstants.Greenburg;
         }
         else if (percentageMole - masmenos > 75 - rango) //5
         {
             // final mole 75 y friend 25
+            nextScene = SceneConstants.NoTeFiesDeTuSombra;
         }
         else if (percentageFriend - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) //6
         {
             // final friend 50% y 50% mole
+            nextScene = SceneConstants.NewBegs;
         }
         else if (percentageFamily - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) // 7
         {
             // final fam 50 y mole 50
+            nextScene = SceneConstants.LosOdiosos3;
         }
         else if (percentageFamily - masmenos > 35 - rango && percentageFriend - masmenos > 35 - rango && percentageMole - masmenos > 35 - rango) //8
         {
             // final todos 33
+            nextScene = SceneConstants.VillageRoyale;
         }
         else //9
         {
             // final todos mal
+            nextScene = SceneConstants.AtencionALasMusaranas;
         }
 
     }
@@ -174,10 +182,19 @@ public class GameManager : MonoBehaviour
                     }
                     break;
                 case SceneConstants.Play:
+                    this.nextScene = SceneConstants.Instructions;
+                    break;
+                case SceneConstants.Instructions:
                     this.nextScene = SceneConstants.Home;
                     break;
                 case SceneConstants.NewDay:
                     this.nextScene = SceneConstants.Home;
+                    break;
+                case SceneConstants.Credits:
+                    this.nextScene = SceneConstants.Play;
+                    break;
+                default:
+                    nextScene = SceneConstants.Credits;
                     break;
 
             }

@@ -10,6 +10,7 @@ public class SceneConstants
     public const string Play = "Play";
     public const string Credits = "Credits";
     public const string NewDay = "NewDay";
+    public const string Instructions = "Instructions";
     public const string Luxurytree = "Luxurytree";
     public const string MalasInfluencias = "MalasInfluencias";
     public const string AsiEsLaFamiliaArdilla = "AsiEsLaFamiliaArdilla";
