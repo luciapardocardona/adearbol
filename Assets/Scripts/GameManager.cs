@@ -51,6 +51,9 @@ public class GameManager : MonoBehaviour
 
 
         dayCount = PlayerPrefs.GetInt(day, 0);
+        PlayerPrefs.SetInt(famScore, 0);
+        PlayerPrefs.SetInt(moleScore, 0);
+        PlayerPrefs.SetInt(friendScore, 0);
 
         if (dayCount > 4)
         {
