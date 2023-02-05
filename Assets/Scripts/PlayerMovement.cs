@@ -121,10 +121,9 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCancel()
     {
+        sound.Stop();
         if (!hasAlreadyAnswered)
         {
-            sound.Stop();
-
             runSpeed = 5f;
             dialogText.gameObject.SetActive(false);
             positiveAnswerDialogText.gameObject.SetActive(false);
@@ -148,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnAccept()
     {
+        sound.Stop();
         if (!hasAlreadyAnswered)
         {
             hasAlreadyAnswered = true;
@@ -157,7 +157,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnEscape(InputValue value)
     {
-        // SceneManager.LoadScene(SceneConstants.Menu);
+        SceneManager.LoadScene(SceneConstants.Play);
     }
 
 }
