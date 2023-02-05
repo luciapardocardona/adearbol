@@ -1,11 +1,11 @@
 public class Dialogs
 {
-    public Asf questions;
-    public Asf playerAnswers;
-    public Asf npcAnswers;
+    public PositiveAndNegative questions;
+    public PositiveAndNegative playerAnswers;
+    public PositiveAndNegative npcAnswers;
 }
 
-public class Asf
+public class PositiveAndNegative
 {
     public People positive;
     public People negative;
@@ -23,7 +23,7 @@ public class QuestionsConstants
 {
     public static Dialogs day1 = new Dialogs
     {
-        questions = new Asf
+        questions = new PositiveAndNegative
         {
             positive = new People
             {
@@ -38,22 +38,22 @@ public class QuestionsConstants
                 mole = "¡Hola, Chulo! ¿Puedo llamarte así? ¿Chulo? A mí me suena de fábula. Soy Topo Sandoquín, de la famosa familia Sandoquín... ¡Sí, sí, los hoteles! Acabo de llegar al pueblo en busca de un lugar dónde construir un gran proyecto, pero necesitaría un poco de apoyo... Estoy seguro de que a alguien joven y enérgico como tú le flipará. ¿Te gustaría que te contase más sobre mi idea?"
             }
         },
-        playerAnswers = new Asf
+        playerAnswers = new PositiveAndNegative
         {
             positive = new People
             {
-                friend = "",
-                family = "",
+                friend = "E, e.",
+                family = "Lo amo.",
                 mole = "Parece interesante."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
+                friend = "No e.",
+                family = "No mucho...",
                 mole = "No me interesa."
             }
         },
-        npcAnswers = new Asf
+        npcAnswers = new PositiveAndNegative
         {
             positive = new People
             {
@@ -72,7 +72,7 @@ public class QuestionsConstants
 
     public static Dialogs day2 = new Dialogs
     {
-        questions = new Asf
+        questions = new PositiveAndNegative
         {
             positive = new People
             {
@@ -87,22 +87,22 @@ public class QuestionsConstants
                 mole = "Hola de nuevo. A ver, porque creo que ayer no empezamos con muy buen pie quería contarte lo de mi proyecto con más detalle. Me gustaría construir una torre en el pueblo con algunas tiendecillas y un hotelilllo, nada muy ostentoso, ya sabes, para reavivar la economía y el turismo. ¡Todos salimos ganando! ¿Qué opinas? ¿Tengo tu apoyo?"
             }
         },
-        playerAnswers = new Asf
+        playerAnswers = new PositiveAndNegative
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Me flipa!",
+                family = "Opino igual.",
+                mole = "Claro, dale."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "No mucho.",
+                family = "No estoy de acuerdo.",
+                mole = "No te apoyaré."
             }
         },
-        npcAnswers = new Asf
+        npcAnswers = new PositiveAndNegative
         {
             positive = new People
             {
@@ -121,7 +121,7 @@ public class QuestionsConstants
 
     public static Dialogs day3 = new Dialogs
     {
-        questions = new Asf
+        questions = new PositiveAndNegative
         {
             positive = new People
             {
@@ -136,22 +136,22 @@ public class QuestionsConstants
                 mole = "Oye, ¿estás liado? Es que necesito que alguien me ayude con un papeleo del Ayuntamiento y sé que a la gente de aquí os van a hacer más caso que a un forastero como yo. ¿Te importaría llevarle estos papeles al alcalde por mí?"
             }
         },
-        playerAnswers = new Asf
+        playerAnswers = new PositiveAndNegative
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Dale, sin problema.",
+                family = "¡Por supuesto!",
+                mole = "Sin problema."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Quita, quita.",
+                family = "Uff, paso.",
+                mole = "Me niego."
             }
         },
-        npcAnswers = new Asf
+        npcAnswers = new PositiveAndNegative
         {
             positive = new People
             {
@@ -170,7 +170,7 @@ public class QuestionsConstants
 
     public static Dialogs day4 = new Dialogs
     {
-        questions = new Asf
+        questions = new PositiveAndNegative
         {
             positive = new People
             {
@@ -185,22 +185,22 @@ public class QuestionsConstants
                 mole = "Mira, sé que ayer no estabas muy receptivo, todos tenemos días malos, Es que no estoy recibiendo mucho apoyo de parte del pueblo para mi proyecto... y mira que lo hago por el bien de toda esta gente y por los extranjeros interesados en vivir la cultura del pueblo... ¿a ti te gusta viajar?"
             }
         },
-        playerAnswers = new Asf
+        playerAnswers = new PositiveAndNegative
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "Obvio.",
+                family = "Es verdad.",
+                mole = "¡Me encanta!"
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¿La qué?",
+                family = "Ah, ¿sí?",
+                mole = "Qué pereza."
             }
         },
-        npcAnswers = new Asf
+        npcAnswers = new PositiveAndNegative
         {
             positive = new People
             {
@@ -219,7 +219,7 @@ public class QuestionsConstants
 
     public static Dialogs day5 = new Dialogs
     {
-        questions = new Asf
+        questions = new PositiveAndNegative
         {
             positive = new People
             {
@@ -234,22 +234,22 @@ public class QuestionsConstants
                 mole = "No me lo puedo creer. Estoy desesperado. Este pueblo está lleno de inconscientes... ¿Cómo puede ser que a nadie le guste mi ideaza? Pero si mi torre va a quedar monísima. No tiene ni una pega. Dime, ¿podré confiar en ti para el resto de las obras de la torre?"
             }
         },
-        playerAnswers = new Asf
+        playerAnswers = new PositiveAndNegative
         {
             positive = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¡Perita!",
+                family = "Os apoyaré.",
+                mole = "Tienes mi apoyo."
             },
             negative = new People
             {
-                friend = "",
-                family = "",
-                mole = ""
+                friend = "¿De qué hablas?",
+                family = "Yo paso.",
+                mole = "No cuentes conmigo."
             }
         },
-        npcAnswers = new Asf
+        npcAnswers = new PositiveAndNegative
         {
             positive = new People
             {
