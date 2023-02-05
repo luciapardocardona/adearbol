@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
     PlayerMovement playerMovement;
 
     private void Awake()
-    {
+     {
         currentScene = SceneManager.GetActiveScene();
 
 
@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
         {
             PercentageCalculation();
             nextScene = SceneConstants.Credits;
+            PlayerPrefs.SetInt(day, 0);
             GoToNextScene();
         }
 
@@ -61,7 +62,7 @@ public class GameManager : MonoBehaviour
 
             if (PlayerPrefs.GetInt("fromVillage") == 0)
             {
-                gameObject.GetComponent<Rigidbody2D>().transform.position.Set(6, -3.2f, 0);
+                gameObject.transform.position = new Vector3(6, -3.2f, 0);
             }
         }
     }
@@ -272,6 +273,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
 
+        dayCount++;
         PlayerPrefs.SetInt(day, dayCount);
         Debug.Log(dayCount);
         Invoke("MoveToNewDay", 3);
@@ -280,7 +282,6 @@ public class GameManager : MonoBehaviour
 
     private void MoveToNewDay()
     {
-        dayCount++;
         HandleSceneTransition(true);
     }
 }

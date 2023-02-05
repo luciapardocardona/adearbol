@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnDecline()
     {
-        gameManager.AnswerChooser(false);
+        InsertText(gameManager.AnswerChooser(false));
     }
 
     void OnAccept()
