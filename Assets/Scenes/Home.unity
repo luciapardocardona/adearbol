@@ -237,17 +237,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dubbingQuestionsMole: []
-  dubbingQuestionsFam: []
+  dubbingQuestionsFam:
+  - {fileID: 8300000, guid: 40fcd557f22f33e408808368d152ff65, type: 3}
+  - {fileID: 8300000, guid: 35ac3239c281be54d9dbacfb146afcfe, type: 3}
+  - {fileID: 8300000, guid: a2259942886864e42bbf0fefde220a1f, type: 3}
+  - {fileID: 8300000, guid: 6482dc875304d2944834cf858840b694, type: 3}
+  - {fileID: 8300000, guid: c889213e7733aac4b966f65eef3924be, type: 3}
   dubbingQuestionsFriend: []
   dubbingQuestionsNegativeMole: []
-  dubbingQuestionsNegativeFam: []
+  dubbingQuestionsNegativeFam:
+  - {fileID: 8300000, guid: 40fcd557f22f33e408808368d152ff65, type: 3}
+  - {fileID: 8300000, guid: fb3fb2f0e75ed13439f5ac96a1bf72c8, type: 3}
+  - {fileID: 8300000, guid: 9ad5542e58c1053418f0535b4b486c92, type: 3}
+  - {fileID: 8300000, guid: db7760f46a731c54ca7b8a098d11d981, type: 3}
+  - {fileID: 8300000, guid: 10a4dbaa0ead8464595ebf5d4ff46b84, type: 3}
   dubbingQuestionsNegativeFriend: []
   dubbingAnswerPositiveMole: []
-  dubbingAnswerPositiveFam: []
+  dubbingAnswerPositiveFam:
+  - {fileID: 8300000, guid: 1e87a911e2dd05a4db73c7f61f06b873, type: 3}
+  - {fileID: 8300000, guid: f883b6809cddd3546ad79c973f28a113, type: 3}
+  - {fileID: 8300000, guid: 123ebde43b2f0344eaa588ef9a1b639b, type: 3}
+  - {fileID: 8300000, guid: 9279e6b2a78e8ad49a5e579213ba61ea, type: 3}
+  - {fileID: 8300000, guid: 50834dec171e3ac43b880da8a5e526b4, type: 3}
   dubbingAnswerPositiveFriend: []
   dubbingAnswerNegativeMole: []
-  dubbingAnswerNegativeFam: []
+  dubbingAnswerNegativeFam:
+  - {fileID: 8300000, guid: a633e1afcac3a4f4eb1c532a14baa292, type: 3}
+  - {fileID: 8300000, guid: 89e6626f3dfc5a248adb0626098c072d, type: 3}
+  - {fileID: 8300000, guid: 584fca4138ca72248927289e1ce0d5ae, type: 3}
+  - {fileID: 8300000, guid: 75da23a84f50c464c8cf5fcb93f739f5, type: 3}
+  - {fileID: 8300000, guid: ba2487e40d01abb4894c80692763ee01, type: 3}
   dubbingAnswerNegativeFriend: []
+  signButton: {fileID: 0}
+  doorButton: {fileID: 0}
 --- !u!4 &434109865
 Transform:
   m_ObjectHideFlags: 0
@@ -372,6 +394,8 @@ MonoBehaviour:
   dubbingAnswerNegativeMole: []
   dubbingAnswerNegativeFam: []
   dubbingAnswerNegativeFriend: []
+  signButton: {fileID: 0}
+  doorButton: {fileID: 0}
 --- !u!224 &799962711 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 917366143, guid: 7dc5fa91ab18b9842aa611a3a70fd8b1, type: 3}

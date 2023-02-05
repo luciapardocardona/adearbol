@@ -720,7 +720,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 4dc05c51c3a46f24ca9108090f682caf, type: 3}
   - {fileID: 8300000, guid: 2b8002bb07f8f7041b79dc03a17e552f, type: 3}
   - {fileID: 8300000, guid: 6233bd45eb3446b4eaadda6d2cc83612, type: 3}
-  dubbingQuestionsFam: []
+  dubbingQuestionsFam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dubbingQuestionsFriend: []
   dubbingQuestionsNegativeMole:
   - {fileID: 8300000, guid: 2e7172a08f01ac940b2130e49875d2f6, type: 3}
@@ -728,7 +733,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d42f3d1bc47c2984b89dbed2d8c9716d, type: 3}
   - {fileID: 8300000, guid: 390462f5200db2341a3a828b8193245a, type: 3}
   - {fileID: 8300000, guid: f5a3150fa30a2bc4489554453fe2695b, type: 3}
-  dubbingQuestionsNegativeFam: []
+  dubbingQuestionsNegativeFam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dubbingQuestionsNegativeFriend: []
   dubbingAnswerPositiveMole:
   - {fileID: 8300000, guid: 3e3ac386b4e5b80438df9a904258f3e3, type: 3}
@@ -736,7 +746,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 8c704205500a85a448d3e7f578234fc1, type: 3}
   - {fileID: 8300000, guid: 75b3e8d063510d0408c3c64ae21c84a9, type: 3}
   - {fileID: 8300000, guid: 4c22c148816ce5143adf90c0e974a508, type: 3}
-  dubbingAnswerPositiveFam: []
+  dubbingAnswerPositiveFam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dubbingAnswerPositiveFriend: []
   dubbingAnswerNegativeMole:
   - {fileID: 8300000, guid: 4f9f5d540c071d441ae611f8fb0d311a, type: 3}
@@ -744,7 +759,12 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 20a0a658fa312f44897bc7962b456036, type: 3}
   - {fileID: 8300000, guid: 1352809dc755d4e42b07cc52e0b323e5, type: 3}
   - {fileID: 8300000, guid: 4b8dae08a06227849aa3b7fb6520e539, type: 3}
-  dubbingAnswerNegativeFam: []
+  dubbingAnswerNegativeFam:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   dubbingAnswerNegativeFriend: []
   signButton: {fileID: 509204798}
   doorButton: {fileID: 1042926761}
