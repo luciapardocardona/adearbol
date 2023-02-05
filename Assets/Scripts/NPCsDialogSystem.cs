@@ -9,8 +9,6 @@ public class NPCsDialogSystem : MonoBehaviour
 
     [SerializeField] List<string> dialogs;
 
-    bool isPlayerOnCharacter;
-
     //[SerializeField] AudioClip soundnpc;
 
     //AudioSource sound;
@@ -20,7 +18,6 @@ public class NPCsDialogSystem : MonoBehaviour
     void Start()
     {
         dialogButton.SetActive(false);
-        isPlayerOnCharacter = false;
         //sound = GetComponent<AudioSource>();
     }
 

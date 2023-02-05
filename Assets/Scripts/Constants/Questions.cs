@@ -29,7 +29,7 @@ public class QuestionsConstants
             {
                 friend = "¡Heeey! ¿Qué paasaa, baabyy? ¿Cómo te trata la viaa? He estao unos días fuera del pueblo y... buaf, han sio unos días chunguillos, para darle al coco y esas cosas... Y se ma ocurrio algo que nos daría LA VIDA, ¿me entiendes? Y yo sé que tú me apoyas hasta la muerte... ¿e o no e?",
                 family = "¡Buenos días, cariño! ¿Qué tal has dormido? Aquí tienes tu desayuno. Hoy he hecho tostaditas con bellota. Si no tienes nada que hacer, deberías acercarte al pueblo. ¡Hoy hay un jaleo enorme! Y mira que este pueblo es tranquilo... Ay... Me encanta este pueblo. ¿A ti te gusta?",
-                mole = "¡Hola, Chulo! ¿Puedo llamarte así? ¿Chulo? A mí me suena de fábula. Soy Topo Sandoquín, de la famosa familia Sandoquín... ¡Sí, sí, los hoteles! Acabo de llegar al pueblo en busca de un lugar dónde construir un gran proyecto, pero necesitaría un poco de apoyo... Estoy seguro de que a alguien joven y enérgico como tú le flipará. ¿Te gustaría que te contase más sobre mi idea?"
+                mole = "¡Hola, Chulo! ¿Puedo llamarte así? ¿Chulo? A mí me suena de fábula. Soy D. Mole de la Torre, de la famosa familia de los Mole... ¡Sí, sí, la de los hoteles! Acabo de llegar al pueblo en busca de un lugar dónde construir un gran proyecto, pero necesitaría un poco de apoyo... Estoy seguro de que a alguien joven y enérgico como tú le flipará. ¿Te gustaría que te contase más sobre mi idea?"
             },
             negative = new People
             {
@@ -44,13 +44,13 @@ public class QuestionsConstants
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "Parece interesante."
             },
             negative = new People
             {
                 friend = "",
                 family = "",
-                mole = ""
+                mole = "No me interesa."
             }
         },
         npcAnswers = new Asf
