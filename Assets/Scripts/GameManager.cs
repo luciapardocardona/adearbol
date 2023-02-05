@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
             GameObject gameObject = GameObject.Find("Squirrel");
             playerScript = gameObject.GetComponent<PlayerScript>();
             playerMovement = gameObject.GetComponent<PlayerMovement>();
-            sound = GetComponent<AudioSource>();
+            sound = gameObject.GetComponent<AudioSource>();
 
             if (PlayerPrefs.GetInt("fromVillage") == 0)
             {

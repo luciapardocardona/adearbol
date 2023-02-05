@@ -236,6 +236,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f04b25e40a64b14a9b466bc2c27a2e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dubbingQuestionsMole: []
+  dubbingQuestionsFam: []
+  dubbingQuestionsFriend: []
+  dubbingQuestionsNegativeMole: []
+  dubbingQuestionsNegativeFam: []
+  dubbingQuestionsNegativeFriend: []
+  dubbingAnswerPositiveMole: []
+  dubbingAnswerPositiveFam: []
+  dubbingAnswerPositiveFriend: []
+  dubbingAnswerNegativeMole: []
+  dubbingAnswerNegativeFam: []
+  dubbingAnswerNegativeFriend: []
+  signButton: {fileID: 0}
+  doorButton: {fileID: 0}
 --- !u!4 &503669593
 Transform:
   m_ObjectHideFlags: 0
