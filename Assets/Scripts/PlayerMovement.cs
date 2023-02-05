@@ -121,15 +121,18 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCancel()
     {
-        sound.Stop();
+        if (!hasAlreadyAnswered)
+        {
+            sound.Stop();
 
-        runSpeed = 5f;
-        dialogText.gameObject.SetActive(false);
-        positiveAnswerDialogText.gameObject.SetActive(false);
-        negativeAnswerDialogText.gameObject.SetActive(false);
-        cancelAnswerDialogText.gameObject.SetActive(false);
-        dialogButton.SetActive(true);
-        buttonText.enabled = true;
+            runSpeed = 5f;
+            dialogText.gameObject.SetActive(false);
+            positiveAnswerDialogText.gameObject.SetActive(false);
+            negativeAnswerDialogText.gameObject.SetActive(false);
+            cancelAnswerDialogText.gameObject.SetActive(false);
+            dialogButton.SetActive(true);
+            buttonText.enabled = true;
+        }
     }
 
     void OnDecline()
