@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 5f;
     [SerializeField] TextMeshProUGUI dialogText;
+    [SerializeField] TextMeshProUGUI buttonText;
     [SerializeField] int charPerDialog = 50;
     int dialogSection = 0;
     GameManager gameManager;
@@ -74,7 +75,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (totalSections >= dialogSection)
         {
-            dialogText.enabled = true;
+            dialogText.gameObject.SetActive(true);
+            buttonText.enabled = false;
 
             runSpeed = 0f;
 
@@ -86,18 +88,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void onCancel()
+    void OnCancel()
     {
         runSpeed = 5f;
-        dialogText.enabled = false;
+        dialogText.gameObject.SetActive(false);
+        buttonText.enabled = true;
     }
 
-    void onDecline()
+    void OnDecline()
     {
         gameManager.AnswerChooser(false);
     }
 
-    void onAccept()
+    void OnAccept()
     {
         InsertText(gameManager.AnswerChooser(true));
     }
