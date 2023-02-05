@@ -16,6 +16,19 @@ public class GameManager : MonoBehaviour
         QuestionsConstants.day5
     };
 
+    [SerializeField] AudioClip[] dubbingQuestionsMole;
+    [SerializeField] AudioClip[] dubbingQuestionsFam;
+    [SerializeField] AudioClip[] dubbingQuestionsFriend;
+    [SerializeField] AudioClip[] dubbingQuestionsNegativeMole;
+    [SerializeField] AudioClip[] dubbingQuestionsNegativeFam;
+    [SerializeField] AudioClip[] dubbingQuestionsNegativeFriend;
+    [SerializeField] AudioClip[] dubbingAnswerPositiveMole;
+    [SerializeField] AudioClip[] dubbingAnswerPositiveFam;
+    [SerializeField] AudioClip[] dubbingAnswerPositiveFriend;
+    [SerializeField] AudioClip[] dubbingAnswerNegativeMole;
+    [SerializeField] AudioClip[] dubbingAnswerNegativeFam;
+    [SerializeField] AudioClip[] dubbingAnswerNegativeFriend;
+
     string famScore = "famScore";
     string friendScore = "friendScore";
     string moleScore = "moleScore";
@@ -29,7 +42,7 @@ public class GameManager : MonoBehaviour
     PlayerMovement playerMovement;
 
     private void Awake()
-     {
+    {
         currentScene = SceneManager.GetActiveScene();
 
 
