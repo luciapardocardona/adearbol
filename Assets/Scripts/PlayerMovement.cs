@@ -22,6 +22,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D myBoxCollider;
     SpriteRenderer sprite;
     private string scene;
+    public bool hasAlreadyAnswered = false;
 
     void Awake()
     {
@@ -102,15 +103,23 @@ public class PlayerMovement : MonoBehaviour
         dialogButton.SetActive(true);
         buttonText.enabled = true;
     }
-
+    
     void OnDecline()
     {
-        InsertText(gameManager.AnswerChooser(false));
+        if (!hasAlreadyAnswered)
+        {
+            hasAlreadyAnswered = true;
+            InsertText(gameManager.AnswerChooser(false));
+        }
     }
 
     void OnAccept()
     {
-        InsertText(gameManager.AnswerChooser(true));
+        if (!hasAlreadyAnswered)
+        {
+            hasAlreadyAnswered = true;
+            InsertText(gameManager.AnswerChooser(true));
+        }
     }
 
     void OnEscape(InputValue value)
