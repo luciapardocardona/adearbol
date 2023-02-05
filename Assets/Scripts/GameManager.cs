@@ -135,17 +135,17 @@ public class GameManager : MonoBehaviour
             // final mole 75 y friend 25
             nextScene = SceneConstants.NoTeFiesDeTuSombra;
         }
-        else if (percentageFriend - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) //6
+        else if (percentageFriend - masmenos > 30 - rango && percentageMole - masmenos > 30 - rango) //6
         {
             // final friend 50% y 50% mole
             nextScene = SceneConstants.NewBegs;
         }
-        else if (percentageFamily - masmenos > 50 - rango && percentageMole - masmenos > 50 - rango) // 7
+        else if (percentageFamily - masmenos > 30 - rango && percentageMole - masmenos > 30 - rango) // 7
         {
             // final fam 50 y mole 50
             nextScene = SceneConstants.LosOdiosos3;
         }
-        else if (percentageFamily - masmenos > 35 - rango && percentageFriend - masmenos > 35 - rango && percentageMole - masmenos > 35 - rango) //8
+        else if (percentageFamily - masmenos > 20 - rango && percentageFriend - masmenos > 20 - rango && percentageMole - masmenos > 20 - rango) //8
         {
             // final todos 33
             nextScene = SceneConstants.VillageRoyale;
