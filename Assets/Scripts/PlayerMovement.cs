@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] float runSpeed = 5f;
     [SerializeField] TextMeshProUGUI dialogText;
+    [SerializeField] TextMeshProUGUI positiveAnswerDialogText;
+    [SerializeField] TextMeshProUGUI negativeAnswerDialogText;
+    [SerializeField] TextMeshProUGUI cancelAnswerDialogText;
     [SerializeField] GameObject dialogButton;
     [SerializeField] TextMeshProUGUI buttonText;
     [SerializeField] int charPerDialog = 50;
@@ -71,11 +74,18 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (playerScript.isPlayerOnNpc)
         {
-            InsertText(gameManager.QuestionChooser());
+            InsertTextQuestion(gameManager.QuestionChooser());
+            InsertTextAnswer(gameManager.GetPlayerAnswers(true), gameManager.GetPlayerAnswers(false));
         }
     }
 
-    private void InsertText(string text)
+    private void InsertTextAnswer(string positiveAnswer, string negativeAnswer)
+    {
+        positiveAnswerDialogText.text = positiveAnswer;
+        negativeAnswerDialogText.text = negativeAnswer;
+    }
+
+    private void InsertTextQuestion(string text)
     {
 
         var totalSections = Mathf.Ceil(text.Length / charPerDialog);
@@ -83,6 +93,9 @@ public class PlayerMovement : MonoBehaviour
         if (totalSections >= dialogSection)
         {
             dialogText.gameObject.SetActive(true);
+            positiveAnswerDialogText.gameObject.SetActive(true);
+            negativeAnswerDialogText.gameObject.SetActive(true);
+            cancelAnswerDialogText.gameObject.SetActive(true);
             dialogButton.SetActive(false);
             buttonText.enabled = false;
 
@@ -100,6 +113,9 @@ public class PlayerMovement : MonoBehaviour
     {
         runSpeed = 5f;
         dialogText.gameObject.SetActive(false);
+        positiveAnswerDialogText.gameObject.SetActive(false);
+        negativeAnswerDialogText.gameObject.SetActive(false);
+        cancelAnswerDialogText.gameObject.SetActive(false);
         dialogButton.SetActive(true);
         buttonText.enabled = true;
     }
@@ -109,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         if (!hasAlreadyAnswered)
         {
             hasAlreadyAnswered = true;
-            InsertText(gameManager.AnswerChooser(false));
+            InsertTextQuestion(gameManager.AnswerChooser(false));
         }
     }
 
@@ -118,7 +134,7 @@ public class PlayerMovement : MonoBehaviour
         if (!hasAlreadyAnswered)
         {
             hasAlreadyAnswered = true;
-            InsertText(gameManager.AnswerChooser(true));
+            InsertTextQuestion(gameManager.AnswerChooser(true));
         }
     }
 

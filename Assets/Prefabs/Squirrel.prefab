@@ -131,6 +131,8 @@ MonoBehaviour:
   sprite: {fileID: 0}
   animacion: {fileID: 0}
   soundsalto: {fileID: 0}
+  signButton: {fileID: 0}
+  doorButton: {fileID: 0}
   isPlayerTouchingDoor: 0
   isPlayerOnPath: 0
   isPlayerOnNpc: 0
@@ -148,8 +150,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 5
   dialogText: {fileID: 0}
+  positiveAnswerDialogText: {fileID: 0}
+  negativeAnswerDialogText: {fileID: 0}
+  cancelAnswerDialogText: {fileID: 0}
+  dialogButton: {fileID: 0}
+  buttonText: {fileID: 0}
   charPerDialog: 50
   myRigidbody: {fileID: 0}
+  hasAlreadyAnswered: 0
 --- !u!1 &4461888036995378130
 GameObject:
   m_ObjectHideFlags: 0

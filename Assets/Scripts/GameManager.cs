@@ -199,6 +199,26 @@ public class GameManager : MonoBehaviour
         return text;
     }
 
+    public string GetPlayerAnswers(bool isPositive)
+    {
+        dayCount = PlayerPrefs.GetInt(day, 0);
+        var text = string.Empty;
+
+        switch (currentScene.name)
+        {
+            case SceneConstants.Home:
+                text = isPositive ? dialogs[dayCount].playerAnswers.positive.family : dialogs[dayCount].playerAnswers.negative.family;
+                break;
+            case SceneConstants.Out:
+                text = isPositive ? dialogs[dayCount].playerAnswers.positive.mole : dialogs[dayCount].playerAnswers.negative.mole;
+                break;
+            case SceneConstants.Village:
+                text = isPositive ? dialogs[dayCount].playerAnswers.positive.friend : dialogs[dayCount].playerAnswers.negative.friend;
+                break;
+        }
+        return text;
+    }
+
     private EPeople WinningOption()
     {
 
